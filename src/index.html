@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Exam-6</title>
+	<html>
+	<style>
+		* {
+			font-family: sans-serif;
+		}
+
+		.container {
+			text-align: center;
+			margin-top: 50px;
+		}
+
+		.input-container {
+			margin-bottom: 10px;
+		}
+
+		#generate-button {
+			margin-top: 10px;
+		}
+
+		#shape-container {
+			display: grid;
+			gap: 20px;
+			grid-template-columns: repeat(4,100px);
+			place-items: center;
+			justify-content: center;
+			margin-top: 20px;
+
+		}
+
+		.box {
+			width: 100px;
+			height: 100px;
+			margin: 10px;
+			background: blue;
+			display: inline-block;
+		}
+
+		.inputs {
+			align-items: center;
+			justify-content: center;
+			display: flex;
+			gap: 20px;
+		}
+
+		.inputs input {
+			width: 100px;
+			height: 12px;
+		}
+	</style>
+
+<body>
+	<div class="container">
+		<h2>Shape Generator</h2>
+		<div class="inputs">
+			<div class="input-container">
+				<select id="shape-select">
+					<option value="circle">Doira</option>
+					<option value="triangle">Uchburchak</option>
+					<option value="square">Kvadrat</option>
+				</select>
+			</div>
+			<div class="input-container">
+				<input type="number" id="size-input" placeholder="Enter Size">
+			</div>
+
+		</div>
+		<button id="generate-button">Generate</button>
+		<div id="shape-container"></div>
+		<div id="error-message"></div>
+	</div>
+	<script src="script.js"></script>
+</body>
+
+</html>
